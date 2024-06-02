@@ -1,0 +1,302 @@
+@media (width < 850px) {
+  html,
+  body {
+    width: 100%;
+    min-height: 100vh;
+  }
+  css-doodle {
+    display: none;
+  }
+  article {
+    width: 100%;
+    height: 100%;
+  }
+  article .title-section {
+    width: 100%;
+    height: 200px;
+    padding-top: 3em;
+  }
+  article .title-section h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.4375rem;
+    text-align: center;
+    font-weight: 200;
+    margin-block-end: 1em;
+    color: hsl(229, 6%, 66%);
+  }
+  article .title-section h1 span {
+    font-weight: 600;
+    color: hsl(234, 12%, 34%);
+  }
+  article .title-section p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    text-align: center;
+    margin-inline: 2.5em 2.5em;
+    font-size: 0.9375rem;
+    color: hsl(229, 6%, 66%);
+  }
+  article .card-section {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    padding: 2em 2em;
+    margin-block-start: 3em;
+  }
+  article .card-section .card {
+    width: 95%;
+    height: 250px;
+    position: relative;
+    background-color: hsl(0, 0%, 98%);
+  }
+  article .card-section .card .card-body {
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    border-radius: 0.5em;
+    position: relative;
+    box-shadow: 0 10px 20px 12px rgba(203, 202, 202, 0.752);
+  }
+  article .card-section .card .card-body .card-title {
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.3375rem;
+    color: hsl(234, 12%, 34%);
+    margin-block: 1em 0.5em;
+    margin-inline: 1em 2em;
+  }
+  article .card-section .card .card-body .card-text {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.7375rem;
+    color: hsl(229, 6%, 66%);
+    margin-inline: 2em 2em;
+    line-height: 25px;
+  }
+  article .card-section .card .card-body .card-icon {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+  article .card-section .card .card-body .card-icon svg {
+    margin-right: 2em;
+  }
+  article .card-section .card::before {
+    content: "";
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    top: -2px;
+    left: 0;
+    border-top-left-radius: 3em;
+    border-top-right-radius: 3em;
+  }
+  article .card-section .card:nth-child(4n+1)::before {
+    background-color: hsl(180, 62%, 55%);
+  }
+  article .card-section .card:nth-child(4n+2)::before {
+    background-color: hsl(0, 78%, 62%);
+  }
+  article .card-section .card:nth-child(4n+3)::before {
+    background-color: hsl(34, 97%, 64%);
+  }
+  article .card-section .card:nth-child(4n+4)::before {
+    background-color: hsl(212, 86%, 64%);
+  }
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+@media (width > 850px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  css-doodle {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+  }
+  article {
+    max-width: 1440px;
+    width: 100%;
+    height: 100vh;
+  }
+  article .title-section {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  article .title-section h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.4375rem;
+    font-weight: 200;
+    text-align: center;
+    color: hsl(229, 6%, 66%);
+    margin-block-end: 0.5em;
+  }
+  article .title-section h1 span {
+    font-weight: 600;
+    color: hsl(234, 12%, 34%);
+  }
+  article .title-section p {
+    font-size: 0.9375rem;
+    font-family: "Poppins", sans-serif;
+    color: hsl(229, 6%, 66%);
+    text-align: center;
+    margin-inline: 28% 28%;
+  }
+  article .card-section {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  article .card-section .card {
+    width: 25%;
+    height: 250px;
+    position: absolute;
+    background-color: hsl(0, 0%, 98%);
+    visibility: hidden;
+  }
+  article .card-section .card .card-body {
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    border-radius: 0.5em;
+    position: relative;
+    box-shadow: 0 10px 20px 12px rgba(203, 202, 202, 0.752);
+  }
+  article .card-section .card .card-body .card-title {
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.3375rem;
+    color: hsl(234, 12%, 34%);
+    margin-block: 1em 0.5em;
+    margin-inline: 1.5em 2em;
+  }
+  article .card-section .card .card-body .card-text {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.7375rem;
+    color: hsl(229, 6%, 66%);
+    margin-inline: 3em 5em;
+    line-height: 25px;
+  }
+  article .card-section .card .card-body .card-icon {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  article .card-section .card .card-body .card-icon svg {
+    margin: 1em 2em;
+  }
+  article .card-section .card:nth-child(4n+1) {
+    animation: 3s card-1 1 forwards;
+    animation-delay: 1.5s;
+  }
+  article .card-section .card:nth-child(4n+2) {
+    animation: 3s card-2 1 forwards;
+    animation-delay: 1.5s;
+  }
+  article .card-section .card:nth-child(4n+3) {
+    animation: 3s card-3 1 forwards;
+    animation-delay: 1.5s;
+  }
+  article .card-section .card:nth-child(4n+4) {
+    animation: 3s card-4 1 forwards;
+    animation-delay: 1.5s;
+  }
+  @keyframes card-1 {
+    from {
+      left: 200%;
+      visibility: visible;
+    }
+    to {
+      left: 10%;
+      visibility: visible;
+    }
+  }
+  @keyframes card-2 {
+    from {
+      top: 200%;
+      visibility: visible;
+    }
+    to {
+      top: 8%;
+      visibility: visible;
+    }
+  }
+  @keyframes card-3 {
+    from {
+      bottom: 200%;
+      visibility: visible;
+    }
+    to {
+      bottom: 8%;
+      visibility: visible;
+    }
+  }
+  @keyframes card-4 {
+    from {
+      right: 200%;
+      visibility: visible;
+    }
+    to {
+      right: 10%;
+      visibility: visible;
+    }
+  }
+  article .card-section .card::before {
+    content: "";
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    top: -2px;
+    left: 0;
+    border-top-left-radius: 3em;
+    border-top-right-radius: 3em;
+  }
+  article .card-section .card:nth-child(4n+1)::before {
+    background-color: hsl(180, 62%, 55%);
+  }
+  article .card-section .card:nth-child(4n+2)::before {
+    background-color: hsl(0, 78%, 62%);
+  }
+  article .card-section .card:nth-child(4n+3)::before {
+    background-color: hsl(34, 97%, 64%);
+  }
+  article .card-section .card:nth-child(4n+4)::before {
+    background-color: hsl(212, 86%, 64%);
+  }
+}/*# sourceMappingURL=styles.css.map */

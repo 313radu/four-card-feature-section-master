@@ -1,0 +1,229 @@
+@import "./variables";
+@import "./mobile.scss";
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+// Global Setup
+
+@media (width > $minMaxWidth) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    css-doodle {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        z-index: -1;
+      }
+
+    article {
+        max-width: $maxWidth;
+        width: 100%;
+        height: 100vh;
+
+        // Title Section
+
+        & .title-section {
+            width: 100%;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            & h1 {
+                font-family: $ff-100;
+                font-size: $fs-100 + 1.5rem;
+                font-weight: $fw-100;
+                text-align: center;
+                color: $clr-neutral-200;
+                margin-block-end: 0.5em;
+
+                & span {
+                    font-weight: $fw-300;
+                    color: $clr-neutral-100;
+                }
+            }
+
+            & p {
+                font-size: $fs-100;
+                font-family: $ff-100;
+                color: $clr-neutral-200;
+                text-align: center;
+                margin-inline: 28% 28%;
+            }
+        }
+
+        // Card Section
+
+        & .card-section {
+            width: 100%;
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            
+            & .card {
+                width: 25%;
+                height: 250px;
+                position: absolute;
+                background-color: $clr-neutral-300;
+                visibility: hidden;
+
+                & .card-body {
+                    width: 100%;
+                    height: 100%;
+                    border: 2px solid transparent;
+                    border-radius: 0.5em;
+                    position: relative;
+                    box-shadow: 0 10px 20px 12px $clr-neutral-400;
+
+                    & .card-title {
+                        font-weight: $fw-300;
+                        font-family: $ff-100;
+                        font-size: $fs-100 + 0.4rem;
+                        color: $clr-neutral-100;
+                        margin-block: 1em 0.5em;
+                        margin-inline: 1.5em 2em;
+                    }
+
+                    & .card-text {
+                        font-family: $ff-100;
+                        font-size: $fs-100 - 0.2rem;
+                        color: $clr-neutral-200;
+                        margin-inline: 3em 5em;
+                        line-height: 25px;
+                    }
+
+                    & .card-icon {
+                        width: 100%;
+                        height: 100px;
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-end;
+
+                        & svg {
+                            margin: 1em 2em;
+                        }
+                    }
+                }
+            }
+
+            & .card:nth-child(4n + 1) {
+                // left: 10%;
+                animation: $timeAnim card-1 1 forwards;
+                animation-delay: $timeDelay;
+            }
+
+            & .card:nth-child(4n + 2) {
+                animation: $timeAnim card-2 1 forwards;
+                animation-delay: $timeDelay;
+            }
+
+            & .card:nth-child(4n + 3) {
+                animation: $timeAnim card-3 1 forwards;
+                animation-delay: $timeDelay;
+            }
+
+            & .card:nth-child(4n + 4) {
+                animation: $timeAnim card-4 1 forwards;
+                animation-delay: $timeDelay;
+            }
+
+            // Card 1
+            @keyframes card-1 {
+                from {
+                    left: 200%;
+                    visibility: visible;
+                }
+                to {
+                    left: 10%;
+                    visibility: visible;
+                }
+            }
+
+            // Card 2
+            @keyframes card-2 {
+                from {
+                    top: 200%;
+                    visibility: visible;
+                }
+                to {
+                    top: 8%;
+                    visibility: visible;
+                }
+            }
+
+            // Card 3
+            @keyframes card-3 {
+                from {
+                    bottom: 200%;
+                    visibility: visible;
+                }
+                to {
+                    bottom: 8%;
+                    visibility: visible;
+                }
+            }
+
+            // Card 4
+            @keyframes card-4 {
+                from {
+                    right: 200%;
+                    visibility: visible;
+                }
+                to {
+                    right: 10%;
+                    visibility: visible;
+                }
+            }
+
+            & .card::before {
+                content: "";
+                width: 100%;
+                height: 5px;
+                position: absolute;
+                top: -2px;
+                left: 0;
+                border-top-left-radius: 3em;
+                border-top-right-radius: 3em;
+            }
+
+            & .card:nth-child(4n + 1)::before {
+                background-color: $clr-primary-200;
+            }
+
+            & .card:nth-child(4n + 2)::before {
+                background-color: $clr-primary-100;
+            }
+
+            & .card:nth-child(4n + 3)::before {
+                background-color: $clr-primary-300;
+            }
+
+            & .card:nth-child(4n + 4)::before {
+                background-color: $clr-primary-400;
+            }
+        }
+    }
+}
